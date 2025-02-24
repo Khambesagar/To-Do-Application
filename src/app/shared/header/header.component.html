@@ -1,0 +1,36 @@
+<div class="bg-gray-800 text-white p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="flex justify-center items-center gap-2">
+      <img src="../../../assets/images/icon.png" alt="To-do" class=" w-8 h-8 md:w-12 md:h-12 ">
+      <a routerLink="/todo" class=" md:text-xl font-semibold">To-Do App</a>
+    </div>
+    <div class="space-x-4 md:space-x-6  md:text-lg  hidden md:block ">
+      <a routerLink="/todo" class="hover:text-orange-400"><i class="fa-solid fa-house hover:text-yellow-400"></i> Home</a>
+      <a routerLink="/shared/email" class="hover:text-orange-400"><i class="fa-solid fa-phone hover:text-yellow-400"></i> Contact</a>
+<!-- For Desktop View -->
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="hover:text-orange-400"><i class="fa-solid fa-circle-user tex hover:text-yellow-400 text-center"></i> Account</div>
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow text-black">
+          <li><a routerLink="/auth/login" class="text-green-700"><i class="fa-solid fa-key "></i>Login</a></li>
+          <hr>
+          <li><button (click)="logout()" class="text-red-700"><i class="fa-solid fa-arrow-right-from-bracket "></i>Logout</button></li>
+        </ul>
+      </div>
+    </div>
+ <!-- For Mobile view -->
+    <div class=" space-x-4  md:text-lg   md:hidden ">
+      <a routerLink="/todo" class="hover:text-orange-400"><i class="fa-solid fa-house"></i> </a>
+      <a routerLink="/shared/email" class="hover:text-orange-400"> <i class="fa-solid fa-phone hover:text-yellow-400"></i></a>
+
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button"><i class="fa-solid fa-circle-user  text-center hover:text-yellow-400"></i> </div>
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow text-black">
+          <li><a routerLink="/auth/login" class="text-green-700"><i class="fa-solid fa-key "></i>Login</a></li>
+          <hr>
+          <li><button (click)="logout()" class="text-red-700"><i class="fa-solid fa-arrow-right-from-bracket "></i>Logout</button></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

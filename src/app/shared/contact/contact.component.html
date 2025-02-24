@@ -1,0 +1,38 @@
+<div class="flex justify-center  items-center  h-screen p-4 bg-gray-300 mt-10">
+  
+  <div class="toast toast-top toast-end mt-16">
+    <div *ngIf="errorMessage"  class="alert alert-info bg-red-600">
+      <span><p class="error text-white bg-red-600 text-center">{{ errorMessage }}</p>
+      </span>
+    </div>
+    <div *ngIf="successMessage" class="alert alert-success">
+      <span>  <p  class="success text-white text-center">{{ successMessage }}</p></span>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2  justify-center  shadow-gray-500 shadow-lg">
+    <div class="hidden md:block bg-violet-800 p-10">
+      <img src="../../../assets/images/contact-img.png" alt="contact-img" class="w-84 h-80 rounded-lg ">
+    </div>
+
+
+    <div class="bg-white md:p-10">
+      <form #contactForm="ngForm" (ngSubmit)="submitForm()">
+        <h1 class="text-center text-lg tracking-widest uppercase font-semibold">Contact Us</h1>
+        <div class="grid  p-4 gap-3">
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" [(ngModel)]="formData.name" name="name" required placeholder="Enter Name..." class="rounded-lg p-1 px-3 border">
+            
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="formData.email" name="email" required placeholder="Enter Email.." required class="rounded-lg p-1 px-3 border">
+
+          <label for="message">Message:</label>
+          <textarea id="message" [(ngModel)]="formData.message" name="message" required  required placeholder="Enter Message..." class="rounded-lg p-1 px-3 border"></textarea>
+
+          <button type="submit" [disabled]="isSubmitting"  class=" rounded-lg bg-violet-900 text-white py-1 mt-2">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

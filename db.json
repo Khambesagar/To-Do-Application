@@ -1,0 +1,60 @@
+{
+  "todos": [
+    {
+      "title": "react",
+      "description": "Assignments",
+      "date": "2025-02-01",
+      "completed": false,
+      "id": "1111"
+    },
+    {
+      "title": "Angular",
+      "description": "Complete Assignments",
+      "date": "2025-02-08",
+      "completed": false,
+      "id": "1212"
+    },
+    {
+      "title": "Node js",
+      "description": "Project Dashboard",
+      "date": "2025-02-01",
+      "completed": false,
+      "id": "1453"
+    },
+    {
+      "title": "HTML",
+      "description": "inteview Questions",
+      "date": "2025-02-18",
+      "completed": false,
+      "id": "8975"
+    },
+    {
+      "title": "Express.Js",
+      "description": "learn Extra points",
+      "date": "2025-02-06",
+      "completed": false,
+      "id": "9985"
+    },
+    {
+      "id": "5243",
+      "title": "angular",
+      "description": "assignments",
+      "date": "2025-01-30",
+      "completed": false
+    },
+    {
+      "id": "00bb",
+      "title": "MongoDb",
+      "description": "Create small project using mongodb",
+      "date": "2025-02-07",
+      "completed": false
+    }
+  ],
+  "users": [
+    {
+      "id": "1a25",
+      "email": "abc@gmail.com",
+      "password": "123456"
+    }
+  ]
+}

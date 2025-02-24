@@ -1,0 +1,37 @@
+<!-- Display To-Do List -->
+
+
+
+<div class=" p-4 bg-slate-400 min-h-screen ">
+  
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-semibold">My To-Do List</h2>
+  </div>
+
+  <app-search (searchTermChanged)="onSearchTermChanged($event)" class="flex justify-center mt-14"></app-search>
+  <div class="flex justify-center">
+    <a routerLink="/todo/add" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600  ">Add New
+      Todo</a>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10  ">
+    <div *ngFor="let todo of filteredTodos || todos" class="bg-white p-4 rounded-lg shadow-md hover:scale-105 transition-transform duration-300  hover:shadow-[inset_0_0_40px_yellow] ">
+      <p class="text-green-700 text-sm text-center font-bold">Date: {{ todo.date }}</p>
+      <h3 class="text-lg font-semibold">{{ todo.title }}</h3>
+      <p class="text-gray-700 object-cover overflow-y-auto">{{ todo.description }}</p>
+      <div class="mt-2 flex justify-between">
+        <button
+          (click)="deleteTodo(todo.id)"
+          class="bg-red-500 text-white py-1 px-4 rounded-md hover:bg-red-600">
+          Delete
+        </button>
+        <button
+          (click)="editTodo(todo.id)"
+          class="bg-blue-500 text-white py-1 px-4 rounded-md hover:bg-blue-600">
+          Edit
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</div> 
